@@ -54,11 +54,7 @@ sql("SELECT * FROM src").show()
 
 // Aggregation queries are also supported.
 sql("SELECT COUNT(*) FROM src").show()
-// +--------+
-// |count(1)|
-// +--------+
-// |    500 |
-// +--------+
+
 
 // The results of SQL queries are themselves DataFrames and support all normal functions.
 val sqlDF = sql("SELECT key, value FROM src WHERE key < 10 ORDER BY key")
